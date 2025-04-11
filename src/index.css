@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Quicksand:wght@300..700&display=swap");
+
+@import "tailwindcss";
+
+@layer base {
+	* {
+		/* Spacing */
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		scroll-behavior: smooth;
+
+		/* Text */
+		font-family: "DM Sans", sans-serif;
+		font-weight: 400;
+		line-height: 1.25rem;
+		font-size: 1rem;
+		color: var(--color-text);
+		font-synthesis: none;
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+
+		/* Colours */
+		background: var(--color-bgLight);
+	}
+
+	span {
+		font-family: "Quicksand", sans-serif;
+		font-weight: 700;
+		font-size: 1.75rem;
+	}
+}
+
+/* Website Colour Palette */
+@theme {
+	--color-accent: #0c0367;
+	--color-primary: #080337;
+	--color-btn: #4703ff;
+	--color-hover: #6f05d1;
+	--color-bgLight: #dfe4ea;
+	--color-bgDark: #e4eaf2;
+	--color-blue: #05bed6;
+	--color-text: #888b97;
+}
+
+/* Tailwind Styles */
+.primarybtn {
+	@apply px-6 py-3 rounded-3xl font-bold flex items-center justify-center bg-btn hover:bg-hover transition duration-500 ease-in-out;
+}
+.secondarybtn {
+	@apply px-6 py-3 rounded-3xl font-bold flex items-center justify-center bg-blue hover:bg-accent transition duration-500 ease-in-out;
+}
+
+.heading {
+	@apply text-5xl font-bold text-primary;
+}
+
+.tag {
+	@apply font-bold text-primary uppercase tracking-wide text-sm;
+}
