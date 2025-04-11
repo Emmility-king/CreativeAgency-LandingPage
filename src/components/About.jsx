@@ -1,7 +1,25 @@
-import React from "react";
+import * as React from "react";
+import Autoplay from "embla-carousel-autoplay";
+
+import { Card, CardContent } from "@/components/ui/card";
+import {
+	Carousel,
+	CarouselContent,
+	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
+} from "@/components/ui/carousel";
 import { NumberTicker } from "@/components/magicui/number-ticker";
 
 const About = () => {
+	const slides = [
+		"/carousel1.webp",
+		"/carousel2.webp",
+		"/carousel3.png",
+		"/carousel4.png",
+		"/carousel2.webp",
+		"/carousel1.webp",
+	];
 	return (
 		<div className="w-full py-32">
 			{/* section 1 */}
@@ -130,7 +148,38 @@ const About = () => {
 						</div>
 					</div>
 				</div>
-				<div>carousel</div>
+			</div>
+
+			{/* Carousel Section */}
+			<div className=" w-full flex justify-center ">
+				<Carousel
+					plugins={[
+						Autoplay({
+							delay: 2000,
+						}),
+					]}
+					className="w-full container cursor-grab active:cursor-grabbing"
+				>
+					<CarouselContent>
+						{slides.map((item, index) => (
+							<CarouselItem
+								key={index}
+								className="md:basis-1/2 lg:basis-1/3"
+							>
+								<div className="p-1">
+									<Card>
+										<CardContent
+											className="flex w-full h-[400px] bg-center bg-cover "
+											style={{
+												backgroundImage: `url(${item})`,
+											}}
+										></CardContent>
+									</Card>
+								</div>
+							</CarouselItem>
+						))}
+					</CarouselContent>
+				</Carousel>
 			</div>
 		</div>
 	);
