@@ -3,7 +3,7 @@ import { About, Blog, Footer, Hero, Navbar, Testimonials } from "./components";
 
 const App = () => {
 	return (
-		<div className="w-full flex flex-col items-center justify-start">
+		<div className=" bg-bgLight flex flex-col items-center justify-start w-full ">
 			<Navbar />
 			<Hero />
 			<About />
