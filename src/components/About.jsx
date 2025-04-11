@@ -6,8 +6,6 @@ import {
 	Carousel,
 	CarouselContent,
 	CarouselItem,
-	CarouselNext,
-	CarouselPrevious,
 } from "@/components/ui/carousel";
 import { NumberTicker } from "@/components/magicui/number-ticker";
 
@@ -169,7 +167,7 @@ const About = () => {
 								<div className="p-1">
 									<Card>
 										<CardContent
-											className="flex w-full h-[400px] bg-center bg-cover "
+											className="flex w-full h-[450px] bg-center bg-cover bg-no-repeat rounded-3xl"
 											style={{
 												backgroundImage: `url(${item})`,
 											}}
