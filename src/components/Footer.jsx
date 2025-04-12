@@ -1,4 +1,5 @@
 import React from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Footer = () => {
 	const date = new Date().getFullYear();
@@ -19,9 +20,9 @@ const Footer = () => {
 			</svg>
 
 			{/* Content */}
-			<div className="container grid grid-cols-4  py-8">
+			<div className="container grid grid-cols-4  pb-16">
 				<div className="flex flex-col gap-5">
-					<p className="text-white text-2xl font-bold">Office</p>
+					<p className="text-white text-xl font-bold">Office</p>
 					<p>
 						Germany — 785 15h Street, <br />
 						Office 478 Berlin, De 81566
@@ -31,12 +32,12 @@ const Footer = () => {
 						info@email.com
 						<div className="w-0 h-[2px] bg-text rounded-full transition-all duration-500 group-hover:w-full" />
 					</p>
-					<p className="text-white text-2xl font-bold">
+					<p className="text-white text-lg font-bold">
 						+1 840 841 25 69
 					</p>
 				</div>
-				<div className="flex flex-col gap-5">
-					<p className="text-white text-2xl font-bold">Links</p>
+				<div className="flex flex-col gap-3">
+					<p className="text-white text-xl font-bold">Links</p>
 					<p>Home</p>
 					<p>Services</p>
 					<p>About Us</p>
@@ -44,7 +45,7 @@ const Footer = () => {
 					<p>Contacts</p>
 				</div>
 				<div className="flex flex-col gap-5">
-					<p className="text-white text-2xl font-bold">Socials</p>
+					<p className="text-white text-xl font-bold">Socials</p>
 					<p>Facebook</p>
 					<p>Twitter</p>
 					<p>Dribbble</p>
@@ -52,16 +53,16 @@ const Footer = () => {
 				</div>
 
 				<div className="flex flex-col gap-5">
-					<p className="text-white text-2xl font-bold">Newsletter</p>
+					<p className="text-white text-xl font-bold">Newsletter</p>
 					<div className="flex items-center gap-3">
 						<input
 							type="text"
-							className=" w-[280px] rounded-3xl bg-gray-900 px-4 py-2"
+							className=" w-[280px] rounded-3xl bg-gray-900 px-4 py-3"
 							placeholder="Enter your Email"
 						/>{" "}
-						<p className="w-12 h-12 rounded-full primarybtn">
-							"arrow"
-						</p>
+						<div className="h-12 primarybtn">
+							<FaArrowRightLong className="text-xl fill-white" />
+						</div>
 					</div>
 					<div className="flex items-center gap-1">
 						<input type="checkbox" name="" id="" />{" "}
