@@ -4,10 +4,10 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const Footer = () => {
 	const date = new Date().getFullYear();
 	return (
-		<div className="padding mt-32 pt-32 bg-bgDark w-full text-text relative">
+		<div className="padding pt-16 xl:pt-32 bg-bgDark w-full text-text relative">
 			{/* Wave SVG at the top */}
 			<svg
-				className="absolute -top-38 left-0 w-full"
+				className="absolute -top-[15%] left-0 w-full"
 				viewBox="0 0 1440 190"
 				version="1.1"
 				xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ const Footer = () => {
 			</svg>
 
 			{/* Content */}
-			<div className="container grid grid-cols-4  pb-16">
+			<div className="container grid md:grid-cols-2 gap-8 xl:grid-cols-4  ">
 				<div className="flex flex-col gap-5">
 					<p className="text-white text-xl font-bold">Office</p>
 					<p>
@@ -72,7 +72,7 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
-			<div className="container py-8 border-t border-gray-600 ">
+			<div className="container py-8 border-t border-gray-600 mt-8">
 				<p className="text-sm">
 					AxiomThemes © {date}. All Rights Reserved.{" "}
 				</p>{" "}

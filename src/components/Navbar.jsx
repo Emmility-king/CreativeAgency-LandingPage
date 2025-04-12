@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FiSearch } from "react-icons/fi";
 import { LuPhoneCall } from "react-icons/lu";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
 const Navbar = () => {
 	const navLinks = ["Home", "Pages", "Portfolio", "Blog", "Contacts"];
 	const [toggle, setToggle] = useState(false);
@@ -26,7 +27,7 @@ const Navbar = () => {
 			<div className="flex items-center justify-between w-full ">
 				<div className="flex gap-12 items-end">
 					<img src="/logo.webp" alt="logo" />
-					<div className="flex items-center">
+					<div className="flex items-center md:hidden">
 						{navLinks.map((item, index) => (
 							<p key={index} className="px-5 group w-fit ">
 								{item}
@@ -34,9 +35,10 @@ const Navbar = () => {
 							</p>
 						))}
 					</div>
-					<FiSearch size={32} className="" />
+					<FiSearch size={32} className="md:hidden" />
 				</div>
-				<div>
+
+				<div className="md:hidden">
 					<div className="flex gap-3 items-center">
 						<div className="bg-accent p-2 rounded-full">
 							<LuPhoneCall size={18} className="" />
@@ -54,6 +56,11 @@ const Navbar = () => {
 							Let's Talk
 						</button>
 					</div>
+				</div>
+
+				{/* Mobile menu */}
+				<div className="xl:hidden">
+					<HiOutlineMenuAlt3 size={40} />
 				</div>
 			</div>
 		</div>

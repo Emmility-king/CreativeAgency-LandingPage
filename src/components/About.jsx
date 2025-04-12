@@ -20,10 +20,10 @@ const About = () => {
 		"/carousel1.webp",
 	];
 	return (
-		<div className="w-full py-32">
+		<div className="w-full py-16 xl:py-32">
 			{/* section 1 */}
 			<motion.div
-				className="w-full flex justify-center gap-32 items-center cointainer"
+				className="w-full flex flex-col lg:flex-row justify-center gap-16 lg:gap-32 items-center cointainer"
 				initial="hidden"
 				whileInView="visible"
 				viewport={{ once: true }}
@@ -98,7 +98,7 @@ const About = () => {
 
 			{/* section 2 */}
 			<motion.div
-				className="w-full bgGradient flex justify-center py-32"
+				className="w-full bgGradient flex justify-center py-16 xl:py-32"
 				initial="hidden"
 				whileInView="visible"
 				viewport={{ once: true }}
@@ -111,32 +111,32 @@ const About = () => {
 					hidden: { opacity: 0, y: 100 },
 				}}
 			>
-				<div className="w-full grid grid-cols-4 gap-8  container">
+				<div className="w-full grid md:grid-cols-2 xl:grid-cols-4 gap-8  container">
 					<div className="relative flex items-center justify-center ">
 						<NumberTicker
 							value={98}
-							className="whitespace-pre-wrap text-[200px] font-bold tracking-tighter text-white"
+							className="whitespace-pre-wrap text-9xl xl:text-[200px] font-bold tracking-tighter text-white"
 						/>
 						<span className="absolute text-2xl">Projects</span>
 					</div>
 					<div className="relative flex items-center justify-center ">
 						<NumberTicker
 							value={65}
-							className="whitespace-pre-wrap text-[200px] font-bold tracking-tighter text-white"
+							className="whitespace-pre-wrap text-9xl xl:text-[200px] font-bold tracking-tighter text-white"
 						/>
 						<span className="absolute text-2xl">People</span>
 					</div>
 					<div className="relative flex items-center justify-center ">
 						<NumberTicker
 							value={10}
-							className="whitespace-pre-wrap text-[200px] font-bold tracking-tighter text-white"
+							className="whitespace-pre-wrap text-9xl xl:text-[200px] font-bold tracking-tighter text-white"
 						/>
 						<span className="absolute text-2xl">Years</span>
 					</div>
 					<div className="relative flex items-center justify-center ">
 						<NumberTicker
 							value={15}
-							className="whitespace-pre-wrap text-[200px] font-bold tracking-tighter text-white"
+							className="whitespace-pre-wrap text-9xl xl:text-[200px] font-bold tracking-tighter text-white"
 						/>
 						<span className="absolute text-2xl">Offices</span>
 					</div>
@@ -144,8 +144,8 @@ const About = () => {
 			</motion.div>
 
 			{/* section 3*/}
-			<div>
-				<div className="w-full flex justify-center gap-32 items-start py-32 cointainer">
+			<div className="padding">
+				<div className="w-full flex flex-col xl:flex-row  justify-center gap-16 xl:gap-32 items-start py-32 cointainer">
 					<div className="flex flex-col gap-6 w-full max-w-[600px]">
 						<p className="tag">creative solutions</p>
 						<span className="heading">
@@ -177,7 +177,7 @@ const About = () => {
 
 			{/* Carousel Section */}
 			<motion.div
-				className=" w-full flex justify-center "
+				className=" w-full flex justify-center overflow-clip"
 				initial="hidden"
 				whileInView="visible"
 				viewport={{ once: true }}
@@ -208,7 +208,7 @@ const About = () => {
 								<div className="p-1">
 									<Card>
 										<CardContent
-											className="flex w-full h-[450px] bg-center bg-cover bg-no-repeat rounded-3xl"
+											className="flex w-full h-[250px] xl:h-[450px] bg-center bg-cover bg-no-repeat rounded-3xl"
 											style={{
 												backgroundImage: `url(${item})`,
 											}}
@@ -222,8 +222,8 @@ const About = () => {
 			</motion.div>
 
 			{/* NewsLetter */}
-			<div className="padding w-full py-32 flex justify-center bgGradient">
-				<div className="w-full container flex justify-center items-center gap-16">
+			<div className="padding w-full py-32 flex  justify-center bgGradient">
+				<div className="w-full container flex flex-col xl:flex-row justify-center items-center gap-16">
 					<span className="heading w-full max-w-[600px]">
 						Subscribe for the exclusive updates!
 					</span>

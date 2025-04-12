@@ -72,7 +72,7 @@ const Blog = () => {
 											<CardContent className="flex flex-col gap-8">
 												<div
 													className="flex w-full
-													h-[300px] bg-center bg-cover
+													h-[200px] xl:h-[300px] bg-center bg-cover
 													bg-no-repeat rounded-2xl"
 													style={{
 														backgroundImage: `url(${item.image})`,

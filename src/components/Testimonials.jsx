@@ -47,7 +47,7 @@ const Testimonials = () => {
 	return (
 		<div className="w-full padding  ">
 			{/* Testimonials */}
-			{/* Carousel Section */}
+
 			<div className=" w-full flex justify-center pb-32">
 				<Carousel
 					loop={true}
@@ -58,10 +58,9 @@ const Testimonials = () => {
 					]}
 					className="w-full container cursor-grab active:cursor-grabbing "
 				>
-					<CarouselPrevious />
 					<CarouselContent className="w-full ">
 						{slides.map((item, index) => (
-							<CarouselItem key={index} className="w-full ">
+							<CarouselItem key={index} className="">
 								<div className="p-1">
 									<Card>
 										<CardContent className="flex flex-col gap-8 items-center">
@@ -89,13 +88,12 @@ const Testimonials = () => {
 							</CarouselItem>
 						))}
 					</CarouselContent>
-
-					<CarouselNext />
 				</Carousel>
 			</div>
+
 			{/* who we are*/}
 			<motion.div
-				className="w-full flex justify-center gap-32 items-center cointainer"
+				className="w-full flex flex-col xl:flex-row justify-center gap-16 xl:gap-32 items-center cointainer"
 				initial="hidden"
 				whileInView="visible"
 				viewport={{ once: true }}
@@ -130,7 +128,7 @@ const Testimonials = () => {
 			</motion.div>
 
 			{/* brands */}
-			<div className="container flex justify-center gap-8 py-32">
+			<div className="container grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-8 py-32">
 				{brands.map((item, index) => (
 					<div className="relative group" key={index}>
 						<img src={item} alt="logo" className="w-[180px]" />
