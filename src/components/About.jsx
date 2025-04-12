@@ -20,7 +20,7 @@ const About = () => {
 		"/carousel1.webp",
 	];
 	return (
-		<div className="w-full py-16 xl:py-32">
+		<div className="w-full py-16 xl:py-32 padding">
 			{/* section 1 */}
 			<motion.div
 				className="w-full flex flex-col lg:flex-row justify-center gap-16 lg:gap-32 items-center cointainer"

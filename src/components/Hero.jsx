@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 const Hero = () => {
 	return (
 		<div
-			className="w-full bg-top bg-cover bg-no-repeat h-screen flex flex-col justify-center items-center gap-8 text-white text-center"
+			className="w-full bg-top bg-cover bg-no-repeat h-screen flex flex-col justify-center items-center gap-8 text-white text-center padding"
 			style={{
 				backgroundImage: `url("/hero.webp")`,
 			}}
 		>
 			<motion.span
-				className="text-6xl"
+				className="text-4xl lg:text-6xl"
 				initial="hidden"
 				whileInView="visible"
 				transition={{
@@ -22,7 +22,7 @@ const Hero = () => {
 					hidden: { opacity: 0, y: 30 },
 				}}
 			>
-				Turning Creative ideas <br /> into Success
+				Turning Creative ideas into Success
 			</motion.span>
 			<motion.p
 				className="w-full max-w-[600px]"

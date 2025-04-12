@@ -21,13 +21,15 @@ const Navbar = () => {
 	return (
 		<div
 			className={`w-full fixed  top-0 padding   flex items-center justify-center text-white z-[200] transition duration-500 ease-in-out ${
-				isScrolled ? "shadow-lg bg-accent py-3" : "bg-transparent pt-8"
+				isScrolled
+					? "shadow-lg bg-accent py-3"
+					: "bg-transparent pt-3 lg:pt-8"
 			}`}
 		>
 			<div className="flex items-center justify-between w-full ">
 				<div className="flex gap-12 items-end">
 					<img src="/logo.webp" alt="logo" />
-					<div className="flex items-center md:hidden">
+					<div className="xl:flex items-center hidden">
 						{navLinks.map((item, index) => (
 							<p key={index} className="px-5 group w-fit ">
 								{item}
@@ -35,10 +37,10 @@ const Navbar = () => {
 							</p>
 						))}
 					</div>
-					<FiSearch size={32} className="md:hidden" />
+					<FiSearch size={32} className="hidden xl:flex" />
 				</div>
 
-				<div className="md:hidden">
+				<div className="hidden xl:flex">
 					<div className="flex gap-3 items-center">
 						<div className="bg-accent p-2 rounded-full">
 							<LuPhoneCall size={18} className="" />

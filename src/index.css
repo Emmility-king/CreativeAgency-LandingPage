@@ -55,7 +55,7 @@
 }
 
 .heading {
-	@apply leading-[3.5rem] text-[3.5rem] text-primary;
+	@apply leading-[3.5rem] text-[2.75rem] md:text-[3.5rem] text-primary;
 }
 .heading2 {
 	@apply text-[1.5rem] text-primary;

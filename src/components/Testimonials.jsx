@@ -73,7 +73,7 @@ const Testimonials = () => {
 												}}
 											/>
 
-											<span className="text-3xl font-normal w-full max-w-[800px] text-primary">
+											<span className="text-xl lg:text-3xl font-normal w-full max-w-[800px] text-primary">
 												{item.comment}
 											</span>
 

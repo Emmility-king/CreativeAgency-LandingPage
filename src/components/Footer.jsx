@@ -7,7 +7,7 @@ const Footer = () => {
 		<div className="padding pt-16 xl:pt-32 bg-bgDark w-full text-text relative">
 			{/* Wave SVG at the top */}
 			<svg
-				className="absolute -top-[15%] left-0 w-full"
+				className="absolute -top-[3%] xl:-top-[15%] left-0 w-full"
 				viewBox="0 0 1440 190"
 				version="1.1"
 				xmlns="http://www.w3.org/2000/svg"
