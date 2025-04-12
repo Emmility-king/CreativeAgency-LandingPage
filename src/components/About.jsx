@@ -152,6 +152,7 @@ const About = () => {
 			{/* Carousel Section */}
 			<div className=" w-full flex justify-center ">
 				<Carousel
+					loop={true}
 					plugins={[
 						Autoplay({
 							delay: 5000,

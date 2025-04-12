@@ -52,7 +52,7 @@ const Testimonials = () => {
 					loop={true}
 					plugins={[
 						Autoplay({
-							delay: 6000,
+							delay: 3000,
 						}),
 					]}
 					className="w-full container cursor-grab active:cursor-grabbing "

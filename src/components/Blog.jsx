@@ -40,6 +40,7 @@ const Blog = () => {
 				{/* Carousel Section */}
 				<div className=" w-full flex justify-center ">
 					<Carousel
+						loop={true}
 						plugins={[
 							Autoplay({
 								delay: 3000,
