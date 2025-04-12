@@ -1,6 +1,6 @@
 import * as React from "react";
 import Autoplay from "embla-carousel-autoplay";
-
+import { FaArrowRightLong } from "react-icons/fa6";
 import { Card, CardContent } from "@/components/ui/card";
 import {
 	Carousel,
@@ -8,6 +8,7 @@ import {
 	CarouselItem,
 } from "@/components/ui/carousel";
 import { NumberTicker } from "@/components/magicui/number-ticker";
+import { GrSend } from "react-icons/gr";
 
 const About = () => {
 	const slides = [
@@ -153,7 +154,7 @@ const About = () => {
 				<Carousel
 					plugins={[
 						Autoplay({
-							delay: 2000,
+							delay: 5000,
 						}),
 					]}
 					className="w-full container cursor-grab active:cursor-grabbing"
@@ -178,6 +179,34 @@ const About = () => {
 						))}
 					</CarouselContent>
 				</Carousel>
+			</div>
+
+			{/* NewsLetter */}
+			<div className="padding w-full py-32 flex justify-center bgGradient">
+				<div className="w-full container flex justify-center items-center gap-16">
+					<span className="heading w-full max-w-[600px]">
+						Subscribe for the exclusive updates!
+					</span>
+					<div className="w-full max-w-[600px]">
+						<div className="flex items-center gap-3 ">
+							<input
+								type="text"
+								className="w-full rounded-3xl bg-white px-4 py-3"
+								placeholder="Enter your Email Address"
+							/>{" "}
+							<div className="h-12 primarybtn text-white gap-2 flex items-center">
+								<GrSend className="text-xl fill-white" />
+								Subscribe
+							</div>
+						</div>
+						<div className="flex items-center gap-1 pt-3 text-text ">
+							<input type="checkbox" name="" id="" />{" "}
+							<p className="text-sm">
+								I agree to the <u>Privacy Policy</u>
+							</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

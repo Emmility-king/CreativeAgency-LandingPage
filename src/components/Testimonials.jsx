@@ -47,12 +47,12 @@ const Testimonials = () => {
 		<div className="w-full padding  ">
 			{/* Testimonials */}
 			{/* Carousel Section */}
-			<div className=" w-full flex justify-center py-32">
+			<div className=" w-full flex justify-center pb-32">
 				<Carousel
 					loop={true}
 					plugins={[
 						Autoplay({
-							delay: 3000,
+							delay: 6000,
 						}),
 					]}
 					className="w-full container cursor-grab active:cursor-grabbing "
