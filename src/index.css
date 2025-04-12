@@ -34,7 +34,6 @@
 @theme {
 	--color-accent: #0c0367;
 	--color-primary: #080337;
-	--color-btn: #4703ff;
 	--color-hover: #6f05d1;
 	--color-bgLight: #f9fafd;
 	--color-bgSoft: #e3edf9b4;
@@ -45,7 +44,7 @@
 
 /* Tailwind Styles */
 .primarybtn {
-	@apply px-6 py-3 rounded-3xl font-bold flex items-center justify-center bg-btn hover:bg-hover transition duration-500 ease-in-out cursor-pointer text-sm;
+	@apply px-6 py-3 rounded-3xl font-bold flex items-center justify-center bg-accent hover:bg-hover transition duration-500 ease-in-out cursor-pointer text-sm;
 }
 .secondarybtn {
 	@apply px-6 py-3 rounded-3xl font-bold flex items-center justify-center bg-blue hover:bg-accent transition duration-500 ease-in-out cursor-pointer text-sm;
