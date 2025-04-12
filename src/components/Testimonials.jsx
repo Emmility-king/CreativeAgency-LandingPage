@@ -1,4 +1,14 @@
 import React from "react";
+import Autoplay from "embla-carousel-autoplay";
+import { ImQuotesLeft } from "react-icons/im";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+	Carousel,
+	CarouselContent,
+	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Testimonials = () => {
 	const brands = [
@@ -9,8 +19,79 @@ const Testimonials = () => {
 		"/br.webp",
 		"/arquivar.webp",
 	];
+
+	const slides = [
+		{
+			name: "Paul Freeman",
+			image: "/customer1.jpg",
+			comment:
+				"Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia.",
+			job: "Expert",
+		},
+		{
+			name: "John Dou",
+			image: "/customer3.jpg",
+			comment:
+				"Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia.",
+			job: "CEO",
+		},
+		{
+			name: "Lindsay Wiliams",
+			image: "/customer2.jpg",
+			comment:
+				"Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia.",
+			job: "Marketer",
+		},
+	];
 	return (
-		<div className="w-full padding py-32 ">
+		<div className="w-full padding  ">
+			{/* Testimonials */}
+			{/* Carousel Section */}
+			<div className=" w-full flex justify-center py-32">
+				<Carousel
+					loop={true}
+					plugins={[
+						Autoplay({
+							delay: 3000,
+						}),
+					]}
+					className="w-full container cursor-grab active:cursor-grabbing "
+				>
+					<CarouselPrevious />
+					<CarouselContent className="w-full ">
+						{slides.map((item, index) => (
+							<CarouselItem key={index} className="w-full ">
+								<div className="p-1">
+									<Card>
+										<CardContent className="flex flex-col gap-8 items-center">
+											<div
+												className="flex w-[90px]
+																h-[90px] bg-center bg-cover
+																bg-no-repeat rounded-full"
+												style={{
+													backgroundImage: `url(${item.image})`,
+												}}
+											/>
+
+											<span className="text-3xl font-normal w-full max-w-[800px] text-primary">
+												{item.comment}
+											</span>
+
+											<div className="flex flex-col items-center">
+												<ImQuotesLeft className="text-3xl fill-blue mb-2" />
+												<span>{item.name}</span>
+												<p>{item.job}</p>
+											</div>
+										</CardContent>
+									</Card>
+								</div>
+							</CarouselItem>
+						))}
+					</CarouselContent>
+
+					<CarouselNext />
+				</Carousel>
+			</div>
 			{/* who we are*/}
 			<div className="w-full flex justify-center gap-32 items-center cointainer">
 				{/* Text */}

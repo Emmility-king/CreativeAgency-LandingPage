@@ -32,7 +32,7 @@ const Blog = () => {
 		},
 	];
 	return (
-		<div className="w-full padding py-32">
+		<div className="w-full padding pb-32">
 			<div className="container  flex flex-col items-center gap-4">
 				<p className="tag">our blog</p>
 				<span className="heading">Our Latest Articles</span>
