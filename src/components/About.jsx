@@ -1,6 +1,6 @@
 import * as React from "react";
 import Autoplay from "embla-carousel-autoplay";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import {
 	Carousel,
@@ -22,7 +22,20 @@ const About = () => {
 	return (
 		<div className="w-full py-32">
 			{/* section 1 */}
-			<div className="w-full flex justify-center gap-32 items-center cointainer">
+			<motion.div
+				className="w-full flex justify-center gap-32 items-center cointainer"
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true }}
+				transition={{
+					duration: 1,
+					ease: "easeOut",
+				}}
+				variants={{
+					visible: { opacity: 1, y: 0 },
+					hidden: { opacity: 0, y: 100 },
+				}}
+			>
 				{/* Image */}
 				<div className="w-full max-w-[600px]">
 					<img src="/about.png" alt="about image" />
@@ -81,10 +94,23 @@ const About = () => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</motion.div>
 
 			{/* section 2 */}
-			<div className="w-full bgGradient flex justify-center py-32">
+			<motion.div
+				className="w-full bgGradient flex justify-center py-32"
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true }}
+				transition={{
+					duration: 1,
+					ease: "easeOut",
+				}}
+				variants={{
+					visible: { opacity: 1, y: 0 },
+					hidden: { opacity: 0, y: 100 },
+				}}
+			>
 				<div className="w-full grid grid-cols-4 gap-8  container">
 					<div className="relative flex items-center justify-center ">
 						<NumberTicker
@@ -115,7 +141,7 @@ const About = () => {
 						<span className="absolute text-2xl">Offices</span>
 					</div>
 				</div>
-			</div>
+			</motion.div>
 
 			{/* section 3*/}
 			<div>
@@ -150,12 +176,25 @@ const About = () => {
 			</div>
 
 			{/* Carousel Section */}
-			<div className=" w-full flex justify-center ">
+			<motion.div
+				className=" w-full flex justify-center "
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true }}
+				transition={{
+					duration: 1,
+					ease: "easeOut",
+				}}
+				variants={{
+					visible: { opacity: 1, y: 0 },
+					hidden: { opacity: 0, y: 100 },
+				}}
+			>
 				<Carousel
 					loop={true}
 					plugins={[
 						Autoplay({
-							delay: 5000,
+							delay: 10000,
 						}),
 					]}
 					className="w-full container cursor-grab active:cursor-grabbing"
@@ -180,7 +219,7 @@ const About = () => {
 						))}
 					</CarouselContent>
 				</Carousel>
-			</div>
+			</motion.div>
 
 			{/* NewsLetter */}
 			<div className="padding w-full py-32 flex justify-center bgGradient">

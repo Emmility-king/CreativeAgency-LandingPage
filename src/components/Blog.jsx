@@ -1,6 +1,6 @@
 import React from "react";
 import Autoplay from "embla-carousel-autoplay";
-
+import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import {
 	Carousel,
@@ -32,7 +32,20 @@ const Blog = () => {
 		},
 	];
 	return (
-		<div className="w-full padding pb-32">
+		<motion.div
+			className="w-full padding pb-32"
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: true }}
+			transition={{
+				duration: 1,
+				ease: "easeOut",
+			}}
+			variants={{
+				visible: { opacity: 1, y: 0 },
+				hidden: { opacity: 0, y: 100 },
+			}}
+		>
 			<div className="container  flex flex-col items-center gap-4">
 				<p className="tag">our blog</p>
 				<span className="heading">Our Latest Articles</span>
@@ -87,7 +100,7 @@ const Blog = () => {
 					</Carousel>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

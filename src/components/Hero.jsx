@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
 	return (
@@ -8,14 +9,54 @@ const Hero = () => {
 				backgroundImage: `url("/hero.webp")`,
 			}}
 		>
-			<span className="text-6xl">
+			<motion.span
+				className="text-6xl"
+				initial="hidden"
+				whileInView="visible"
+				transition={{
+					duration: 1,
+					ease: "easeInOut",
+				}}
+				variants={{
+					visible: { opacity: 1, y: 0 },
+					hidden: { opacity: 0, y: 30 },
+				}}
+			>
 				Turning Creative ideas <br /> into Success
-			</span>
-			<p className="w-full max-w-[600px]">
+			</motion.span>
+			<motion.p
+				className="w-full max-w-[600px]"
+				initial="hidden"
+				whileInView="visible"
+				transition={{
+					duration: 1,
+					ease: "easeInOut",
+				}}
+				variants={{
+					visible: { opacity: 1, y: 0 },
+					hidden: { opacity: 0, y: 40 },
+				}}
+			>
 				Consectetur adipiscing elit, sed do eiusmod tempor incididunt
 				dolore magna aliqua quis nostrud exerc.
-			</p>
-			<button className="secondarybtn">Discover Now</button>
+			</motion.p>
+			<motion.button
+				className="secondarybtn"
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true }}
+				transition={{
+					duration: 1,
+
+					ease: "easeIn",
+				}}
+				variants={{
+					visible: { opacity: 1, y: 0 },
+					hidden: { opacity: 0, y: 20 },
+				}}
+			>
+				Discover Now
+			</motion.button>
 		</div>
 	);
 };

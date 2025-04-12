@@ -9,6 +9,7 @@ import {
 	CarouselNext,
 	CarouselPrevious,
 } from "@/components/ui/carousel";
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
 	const brands = [
@@ -93,7 +94,20 @@ const Testimonials = () => {
 				</Carousel>
 			</div>
 			{/* who we are*/}
-			<div className="w-full flex justify-center gap-32 items-center cointainer">
+			<motion.div
+				className="w-full flex justify-center gap-32 items-center cointainer"
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true }}
+				transition={{
+					duration: 1,
+					ease: "easeOut",
+				}}
+				variants={{
+					visible: { opacity: 1, y: 0 },
+					hidden: { opacity: 0, y: 100 },
+				}}
+			>
 				{/* Text */}
 				<div className="flex flex-col gap-6 w-full max-w-[600px] text-text">
 					<p className="tag">Who we are</p>
@@ -113,7 +127,7 @@ const Testimonials = () => {
 				<div className="w-full max-w-[600px]">
 					<img src="/about2.png" alt="about image" />
 				</div>
-			</div>
+			</motion.div>
 
 			{/* brands */}
 			<div className="container flex justify-center gap-8 py-32">
